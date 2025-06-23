@@ -1,13 +1,5 @@
 # TODO API
 Мини-сервис управления задачами <!-- описание репозитория -->
-<!--Блок информации о репозитории в бейджах-->
-![Static Badge](https://img.shields.io/badge/OkulusDev-Oxygen-Oxygen)
-![GitHub top language](https://img.shields.io/github/languages/top/OkulusDev/Oxygen)
-![GitHub](https://img.shields.io/github/license/OkulusDev/Oxygen)
-![GitHub Repo stars](https://img.shields.io/github/stars/OkulusDev/Oxygen)
-![GitHub issues](https://img.shields.io/github/issues/OkulusDev/Oxygen)
-
-![Logotype](./docs/wall.jpg)
 
 <!--Установка-->
 ## Установка (Linux)
@@ -54,16 +46,10 @@
 
 <!--описание коммитов-->
 ## Описание коммитов
-| Название | Описание                                                        |
-|----------|-----------------------------------------------------------------|
-| build	   | Сборка проекта или изменения внешних зависимостей               |
-| sec      | Безопасность, уязвимости                                        |
-| ci       | Настройка CI и работа со скриптами                              |
-| docs	   | Обновление документации                                         |
-| feat	   | Добавление нового функционала                                   |
-| fix	   | Исправление ошибок                                              |
-| perf	   | Изменения направленные на улучшение производительности          |
-| refactor | Правки кода без исправления ошибок или добавления новых функций |
-| revert   | Откат на предыдущие коммиты                                     |
-| style	   | Правки по кодстайлу (табы, отступы, точки, запятые и т.д.)      |
-| test	   | Добавление тестов                                               |
+| Метод | Путь              | Описание                   |
+|-------|-------------------|----------------------------|
+| GET   | /tasks            | Получить все задачи        |
+| GET   | /tasks/<id>       | Получить задачу по ID      |
+| POST  | /tasks            | Создать новую задачу       |
+| PUT   | /tasks/<id>       | Обновить задачу по ID      |
+| DELETE| /tasks/<id>       | Удалить задачу по ID       |
