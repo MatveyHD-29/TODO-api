@@ -53,4 +53,5 @@
 | POST  | /tasks            | Создать новую задачу       |
 | PUT   | /tasks/<id>       | Обновить задачу по ID      |
 | DELETE| /tasks/<id>       | Удалить задачу по ID       |
+
 [API-документация](https://documenter.getpostman.com/view/41188224/2sB2xCh9Ly)
