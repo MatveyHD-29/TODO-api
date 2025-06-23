@@ -6,27 +6,13 @@
 
 1. Скачайте файл ```main.py```.
 
-```git clone https://github.com/OkulusDev/Oxygen.git```
+2. Установите зависимости:
 
-2. Переход в директорию Oxygen
+```pip install flask```
 
-```cd Oxygen```
+3. Запустите приложение:
 
-3. Создание виртуального окружения
-
-```python3 -m venv venv```
-
-4. Активация виртуального окружения
-
-```source venv/bin/activate```
-
-5. Установка зависимостей
-
-```pip3 install -r requirements.txt```
-
-6. Запуск скрипта для демонстрации возможностей Oxygen
-
-```python3 oxygen.py --help```
+```python main.py```
 
 <!--Маршруты API-->
 ## Маршруты API
