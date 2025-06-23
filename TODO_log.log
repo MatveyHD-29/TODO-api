@@ -1,0 +1,38 @@
+2025-06-23 21:36:20,244 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-23 21:36:20,244 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-23 21:36:20,245 [INFO]  * Restarting with stat
+2025-06-23 21:36:20,408 [WARNING]  * Debugger is active!
+2025-06-23 21:36:20,410 [INFO]  * Debugger PIN: 433-086-006
+2025-06-23 21:36:26,656 [INFO] 127.0.0.1 - - [23/Jun/2025 21:36:26] "GET /tasks HTTP/1.1" 200 -
+2025-06-23 21:38:48,914 [INFO] 127.0.0.1 - - [23/Jun/2025 21:38:48] "GET /tasks/2 HTTP/1.1" 200 -
+2025-06-23 21:39:14,450 [INFO] 127.0.0.1 - - [23/Jun/2025 21:39:14] "GET /tasks/2 HTTP/1.1" 200 -
+2025-06-23 21:41:57,127 [INFO] 127.0.0.1 - - [23/Jun/2025 21:41:57] "[35m[1mPOST /tasks HTTP/1.1[0m" 201 -
+2025-06-23 21:44:34,245 [ERROR] Ошибка
+Traceback (most recent call last):
+  File "C:\MatveyHD\python\razer\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\MatveyHD\python\razer\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\MatveyHD\python\razer\main.py", line 154, in edit_task
+    if name in request.json: # Получение данных из запроса
+               ^^^^^^^^^^^^
+  File "C:\MatveyHD\python\razer\.venv\Lib\site-packages\werkzeug\wrappers\request.py", line 560, in json
+    return self.get_json()
+           ~~~~~~~~~~~~~^^
+  File "C:\MatveyHD\python\razer\.venv\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\MatveyHD\python\razer\.venv\Lib\site-packages\flask\wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\MatveyHD\python\razer\.venv\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+    ...<2 lines>...
+    )
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-06-23 21:44:34,247 [INFO] 127.0.0.1 - - [23/Jun/2025 21:44:34] "[35m[1mPUT /tasks/2 HTTP/1.1[0m" 500 -
+2025-06-23 21:45:52,760 [INFO] 127.0.0.1 - - [23/Jun/2025 21:45:52] "[31m[1mPUT /tasks/2 HTTP/1.1[0m" 400 -
+2025-06-23 21:46:05,033 [INFO] 127.0.0.1 - - [23/Jun/2025 21:46:05] "PUT /tasks/2 HTTP/1.1" 200 -
+2025-06-23 21:47:29,284 [INFO] 127.0.0.1 - - [23/Jun/2025 21:47:29] "DELETE /tasks/2 HTTP/1.1" 200 -
